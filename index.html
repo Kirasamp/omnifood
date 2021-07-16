@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="vendors/CSS/normalise.css" />
-    <link rel="stylesheet" type="text/css" href="vendors/CSS/grid.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Vendors/CSS/normalise.css" />
+    <link rel="stylesheet" type="text/css" href="Vendors/CSS/grid.css" />
     <link rel="stylesheet" type="text/css" href="resources/CSS/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/CSS/queries.css" />
 
@@ -16,12 +17,17 @@
   </head>
   <body>
     <header>
-      <nav class="sticky-nav">
+      <nav>
         <div class="row"></div>
         <img
           src="resources/img/logo-white.png"
           alt="Omnifood logo"
           class="logo"
+        />
+        <img
+          src="resources/img/logo.png"
+          alt="Omnifood logo"
+          class="logo-black"
         />
 
         <ul class="main-nav">
@@ -33,16 +39,16 @@
       </nav>
       <div class="hero-text-box">
         <h1>
-          Goodbye junk food. <br />
+          Goodbye junk food.<br />
           Hello super healthy meals.
         </h1>
         <a class="btn btn-full" href="#">I’m hungry</a>
         <a class="btn btn-ghost" href="#">Show me more</a>
       </div>
     </header>
-    <section class="section-features">
+
+    <section class="section-features js--section-features">
       <div class="row">
-        <!-- &mdash is a special html charactor - and extra long dash -->
         <h2>Get food fast &mdash; not fast food.</h2>
         <p class="long-copy">
           Hello, we’re Omnifood, your new premium food delivery service. We know
@@ -92,10 +98,8 @@
       </div>
     </section>
     <section class="section-meals">
-      <!-- we want the images to ue 100% of the browser, so we wont use "row", insteaad an unordered list -->
       <ul class="meals-showcase">
         <li>
-          <!-- figure can contain an image and a caption <figcaption> -->
           <figure class="meal-photo">
             <img
               src="resources/img/1.jpg"
@@ -127,7 +131,6 @@
       </ul>
       <ul class="meals-showcase">
         <li>
-          <!-- figure can contain an image and a caption <figcaption> -->
           <figure class="meal-photo">
             <img
               src="resources/img/5.jpg"
@@ -162,7 +165,6 @@
       </ul>
     </section>
     <section class="section-steps">
-      <!-- we add in a row so that the title centers -->
       <div class="row">
         <h2>How it works &mdash; Simple as 1, 2, 3</h2>
       </div>
@@ -430,6 +432,7 @@
             <div>
               <h3>Starter</h3>
               <p class="plan-price">$19 <span>/ meal</span></p>
+
               <p class="plan-price-meal">&nbsp;</p>
             </div>
             <div>
@@ -506,7 +509,6 @@
               <label for="find-us">How did you find us?</label>
             </div>
             <div class="col span-2-of-3">
-              <!-- the select class is a drop down menu you can select from. each option is "option", the value will be what is returned when the form is sent. Selected sets a default option -->
               <select name="find-us" id="find-us">
                 <option value="friends" selected>Friends</option>
                 <option value="search">Search engine</option>
@@ -520,7 +522,6 @@
               <label>Newsletter</label>
             </div>
             <div class="col span-2-of-3">
-              <!-- checkbox is a checkbox, checked means its checked by default -->
               <input
                 type="checkbox"
                 name="newsletter"
@@ -565,22 +566,22 @@
           <ul class="social-links">
             <li>
               <a href="#"
-                ><ion-icon class="fb" name="logo-facebook"></ion-icon
+                ><ion-icon name="logo-facebook" class="fb"></ion-icon
               ></a>
             </li>
             <li>
               <a href="#"
-                ><ion-icon class="twitter" name="logo-twitter"></ion-icon
+                ><ion-icon name="logo-twitter" class="twitter"></ion-icon
               ></a>
             </li>
             <li>
               <a href="#"
-                ><ion-icon class="google" name="logo-google"></ion-icon
+                ><ion-icon name="logo-google" class="google"></ion-icon
               ></a>
             </li>
             <li>
               <a href="#"
-                ><ion-icon class="insta" name="logo-instagram"></ion-icon
+                ><ion-icon name="logo-instagram" class="insta"></ion-icon
               ></a>
             </li>
           </ul>
@@ -590,13 +591,13 @@
         <p>Copyright &copy; 2015 by Omnifood. All rights reserved</p>
       </div>
     </footer>
-
-    <!-- icons -->
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
     <script src="resources/js/script.js"></script>
   </body>
 </html>
